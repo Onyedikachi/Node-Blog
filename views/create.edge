@@ -1,0 +1,51 @@
+@layout('layouts.app')
+
+@section('content')
+ <!-- Page Header -->
+ <header class="masthead" style="background-image: url('/img/contact-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>New Post</h1>
+            <span class="subheading">Have questions? I have answers.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <form action="/posts/store" method="POST" encType="multipart/form-data">
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label for="">Title</label>
+                            <input type="text" name="title" placeholder="Title" class="form-control">
+                        </div>
+                        <div class="form-group floating-label-form-group controls">
+                            <label for="">Username</label>
+                            <input type="text" name="username" placeholder="Username" class="form-control">
+                        </div>
+                        <div class="form-group floating-label-form-group controls">
+                            <label for="">Description</label>
+                            <input type="text" name="description" placeholder="Description" class="form-control">
+                        </div>
+                        <div class="form-group floating-label-form-group controls">
+                            <label for="">Content</label>
+                            <textarea name="content" id="" cols="30" placeholder="Content" rows="10"></textarea>
+                        </div>
+                        <div class="form-group mt-5">
+                            <input type="file" name="image" class="form-control-file">
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-primary my-4">Create Post</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>  
+@endsection
